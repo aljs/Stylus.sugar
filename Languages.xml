@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<language id="com.stylus">
+		<root-zone>language-root.stylus</root-zone>
+		<name>Stylus</name>
+		<detectors>
+			<extension>styl</extension>
+		</detectors>
+		<default-extension>styl</default-extension>
+	</language>
+	<meta>
+		<name>Stylus.sugar</name>
+		<description>Stylus sugar for MacRabbit's Espresso code editor</description>
+		<author>Alex Ledak</author>
+		<version status="preview">1.0b1</version>
+		<download format="git">git://github.com/aljs/Stylus.sugar.git</download>
+		<url>http://github.com/aljs/Stylus.sugar</url>
+	</meta>
+</settings>
