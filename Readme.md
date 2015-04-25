@@ -4,7 +4,7 @@ This is a plugin for MacRabbit's [Espresso](http://macrabbit.com/espresso/) code
 
 ## Features:
 
-* **Auto-complete with contextual completion for values of CSS-properties**
+* **Auto-complete for pseudo-classes and properties**
 * **Syntax highlighting with color scheme based on active color theme in Espresso**
 * **Navigator panel basic support**
 
