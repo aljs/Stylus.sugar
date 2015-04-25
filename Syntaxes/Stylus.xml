@@ -91,7 +91,7 @@
          <expression>(^|\s{2,})(\.|\#|\:|\b(a|abbr|acronym|address|area|article|aside|audio|b|base|bdi|bdo|big|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|datalist|dd|del|details|dfn|dialog|div|dl|dt|em|eventsource|fieldset|figure|figcaption|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|label|legend|li|link|main|map|mark|menu|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|samp|script|section|select|small|span|strike|strong|style|sub|summary|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b)</expression>
        </starts-with>
        <ends-with>
-         <expression>$</expression>
+         <expression >$|(\{)</expression>
        </ends-with>
        <subzones>
          <include collection="selector-additional" />
@@ -125,7 +125,7 @@
           <expression>(?&lt;=^|\{|;)\s*(?=[a-zA-Z-])</expression>
         </starts-with>
         <ends-with>
-          <expression>$</expression>
+          <expression>$|(\})</expression>
         </ends-with>
         <subzones>
           <include collection="property-names"/>
@@ -136,7 +136,7 @@
     
     <collection name="property-names">
       <zone name="property-name.stylus">
-      	<expression>(-moz-|-ms-|-o-|-webkit-)?(align-(content|items|self)?|animation(-delay|-direction|-duration|-fill-mode|-iteration-count|-name|-play-state|-timing-function)?|azimuth|background(-attachment|-clip|-color|-image|-position|-repeat)?|box-shadow|box-sizing|border(-collapse|-color|-width|((-bottom|-top)(-left|-right))?-radius|-spacing|-style|-image(-outset|-repeat|-slice|-source|-width)?|(-bottom|-left|-right|-top)(-color|-style|-width)?)?|bottom|caption-side|clear|clip|color|content|counter-increment|counter-reset|cue-after|cue-before|cue|cursor|direction|display|elevation|empty-cells|filter|flex(-basis|-direction|-flow|-grow|-shrink|-wrap)?|float|font(-family|-size-adjust|-size|-stretch|-style|-variant|-weight)?|height|image-rendering|justify-content|left|letter-spacing|line-height|list-style(-image|-position|-type)?|margin(-bottom|-left|-right|-top)?|marker-offset|marks|max-height|max-width|min-height|min-width|opacity|orphans|outline(-color|-style|-width)?|(text-)?overflow(-[xy])?|padding(-bottom|-left|-right|-top)?|page-break-after|page-break-before|page-break-inside|page|pause-after|pause-before|pause|pitch-range|pitch|play-during|pointer-events|position|quotes|resize|richness|right|size|speak-header|speak-numeral|speak-punctuation|speech-rate|speak|src|stress|table-layout|text-(align|decoration|indent|rendering|shadow|transform)|top|transition(-property|-duration|-duration|-delay)?|transform(-origin|-style)?|unicode-bidi|vertical-align|visibility|voice-family|volume|white-space|widows|width|word-(break|spacing|wrap)|zoom|z-index)\b</expression>
+      	<expression>(-moz-|-ms-|-o-|-webkit-)?(align-(content|items|self)?|animation(-delay|-direction|-duration|-fill-mode|-iteration-count|-name|-play-state|-timing-function)?|azimuth|background(-attachment|-clip|-color|-image|-position|-repeat)?|box-shadow|box-sizing|border(-collapse|-color|-width|((-bottom|-top)(-left|-right))?-radius|-spacing|-style|-image(-outset|-repeat|-slice|-source|-width)?|(-bottom|-left|-right|-top)(-color|-style|-width)?)?|bottom|caption-side|clear|clip|color|content|counter-increment|counter-reset|cue-after|cue-before|cue|cursor|direction|display|elevation|empty-cells|filter|flex(-basis|-direction|-flow|-grow|-shrink|-wrap)?|float|font(-family|-size-adjust|-size|-stretch|-style|-variant|-weight)?|height|image-rendering|justify-content|left|letter-spacing|line-height|list-style(-image|-position|-type)?|margin(-bottom|-left|-right|-top)?|marker-offset|marks|max-height|max-width|min-height|min-width|opacity|orphans|outline(-color|-style|-width)?|(text-)?overflow(-[xy])?|padding(-bottom|-left|-right|-top)?|page-break-after|page-break-before|page-break-inside|page|pause-after|pause-before|pause|pitch-range|pitch|play-during|pointer-events|position|quotes|resize|richness|right|size|speak-header|speak-numeral|speak-punctuation|speech-rate|speak|src|stress|table-layout|text-(align|decoration|indent|rendering|shadow|transform)|top|transition(-property|-duration|-duration|-delay)?|transform(-origin|-style)?|unicode-bidi|vertical-align|visibility|voice-family|volume|white-space|widows|width|word-(break|spacing|wrap)|zoom|z-index)</expression>
       </zone>
     </collection>
     
