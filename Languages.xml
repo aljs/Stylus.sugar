@@ -12,7 +12,7 @@
 		<name>Stylus.sugar</name>
 		<description>Stylus sugar for MacRabbit's Espresso code editor</description>
 		<author>Alex Ledak</author>
-		<version status="preview">1.0b1</version>
+		<version>1.1</version>
 		<download format="git">git://github.com/aljs/Stylus.sugar.git</download>
 		<url>http://github.com/aljs/Stylus.sugar</url>
 	</meta>

@@ -11,15 +11,15 @@
 
   <library>
     <collection name="comments">
-      <zone name="itemize.group-start.comment.block.stylus">
-      	<starts-with>//\s*@group\s</starts-with>
-      	<ends-with>$</ends-with>
-      	 <subzones>
-      		<cut-off>$</cut-off>
-      		<zone name="name">
-      			<expression>.*</expression>
-      		</zone>
-      	</subzones>
+    <zone name="itemize.group-start.comment.block.stylus">
+      <starts-with>//\s*@group\s</starts-with>
+      <ends-with>$</ends-with>
+    	<subzones>
+        <cut-off>$</cut-off>
+    	  <zone name="name">
+    		  <expression>.*</expression>
+    	  </zone>
+      </subzones>
       </zone>
       <zone name="itemize.group-end.comment.block.stylus">
       	<expression>//\s*@end(?:\s+.*|\s*)</expression>
@@ -33,8 +33,8 @@
       </zone>
       <zone name="comment.block.stylus">
       	<starts-with>
-      		<expression>/\*</expression>
-      		<capture number="0" name="punctuation.definition.begin"/>
+          <expression>/\*</expression>
+          <capture number="0" name="punctuation.definition.begin"/>
       	</starts-with>
       	<ends-with>
       		<expression>\*/</expression>
@@ -43,12 +43,12 @@
       </zone>
       <zone name="comment.block.buffered.stylus">
       	<starts-with>
-      		<expression>/\*!</expression>
-      		<capture number="0" name="punctuation.definition.begin"/>
+          <expression>/\*!</expression>
+          <capture number="0" name="punctuation.definition.begin"/>
       	</starts-with>
       	<ends-with>
-      		<expression>\*/</expression>
-      		<capture number="0" name="punctuation.definition.end"/>
+          <expression>\*/</expression>
+          <capture number="0" name="punctuation.definition.end"/>
       	</ends-with>
       </zone>
     </collection>
@@ -60,7 +60,7 @@
         <subzones>
           <cut-off>$</cut-off>
           <zone name="parameter">
-          	<expression>.*</expression>
+            <expression>.*</expression>
           </zone>
         </subzones>
       </zone>
@@ -70,7 +70,7 @@
         <subzones>
           <cut-off>$</cut-off>
           <zone name="parameter">
-          	<expression>.*</expression>
+            <expression>.*</expression>
           </zone>
         </subzones>
       </zone>
@@ -88,13 +88,13 @@
    <collection name="selectors">
      <zone name="css.selector.stylus">
        <starts-with>
-         <expression>(^|\s{2,})(\.|\#|\b(a|abbr|acronym|address|area|article|aside|audio|b|base|bdi|bdo|big|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|datalist|dd|del|details|dfn|dialog|div|dl|dt|em|eventsource|fieldset|figure|figcaption|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|label|legend|li|link|main|map|mark|menu|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|samp|script|section|select|small|span|strike|strong|style|sub|summary|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b)</expression>
+         <expression>(^|\s{2,})(\.|\#|\:|\b(a|abbr|acronym|address|area|article|aside|audio|b|base|bdi|bdo|big|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|datalist|dd|del|details|dfn|dialog|div|dl|dt|em|eventsource|fieldset|figure|figcaption|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|label|legend|li|link|main|map|mark|menu|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|samp|script|section|select|small|span|strike|strong|style|sub|summary|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b)</expression>
        </starts-with>
        <ends-with>
          <expression>$</expression>
        </ends-with>
        <subzones>
-         <include collection="selector-misc" />
+         <include collection="selector-additional" />
        </subzones>
      </zone>
      <zone name="css.selector.parentreference.stylus">
@@ -105,14 +105,14 @@
          <expression>$</expression>
        </ends-with>
        <subzones>
-         <include collection="selector-misc" />
+         <include collection="selector-additional" />
        </subzones>
      </zone>
    </collection>
    
-   <collection name="selector-misc">
+   <collection name="selector-additional">
      <zone name="pseudo-classes">
-       <expression>(:+)\b(after|before|first-child|first-letter|first-line|selection|active|hover|link|visited|focus)\b</expression>
+       <expression>(:+)\b(active|checked|default|dir|disabled|empty|enabled|first|first-child|first-of-type|fullscreen|focus|hover|indeterminate|in-range|invalid|lang|last-child|last-of-type|left|link|not|nth-child|nth-last-child|nth-last-of-type|nth-of-type|only-child|only-of-type|optional|out-of-range|read-only|read-write|required|right|root|scope|target|valid|visited)\b</expression>
      </zone>
      <zone name="punctuation.comma">
        <expression>,</expression>
@@ -170,25 +170,25 @@
       </zone>
       <zone name="property-value.function.misc.stylus">
       	<starts-with>
-      		<expression>(attr|blur|brightness|contrast|counters|cubic-bezier|drop-shadow|format|grayscale|hsla|hue-rotate|invert|linear-gradient|matrix(3d)?|opacity|perspective|rgba|rotate(3d|X|Y|Z)?|saturate|sepia|scale(3d|X|Y|Z)?|skewX|skewY|translate(3d|X|Y|Z)?|url)\s*(\()</expression>
-      		<capture number="1" name="name"/>
-      		<capture number="2" name="punctuation.section.function"/>
+          <expression>(attr|blur|brightness|contrast|counters|cubic-bezier|drop-shadow|format|grayscale|hsla|hue-rotate|invert|linear-gradient|matrix(3d)?|opacity|perspective|rgba|rotate(3d|X|Y|Z)?|saturate|sepia|scale(3d|X|Y|Z)?|skewX|skewY|translate(3d|X|Y|Z)?|url)\s*(\()</expression>
+          <capture number="1" name="name"/>
+          <capture number="2" name="punctuation.section.function"/>
       	</starts-with>
       	<ends-with>
-      		<expression>(\))</expression>
-      		<capture name="punctuation.section.function"/>
+          <expression>(\))</expression>
+          <capture name="punctuation.section.function"/>
       	</ends-with>
       	<subzones>
-      		<include collection="strings"/>
-      		<zone name="color.rgb.stylus">
-      			<expression>(\b0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\b)</expression>
-      		</zone>
-      		<zone name="color.rgb-percentage.stylus">
-      			<expression>\b([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%</expression>
-      		</zone>
-      		<zone name="parameter.misc">
-      			<expression>[^'") \t]+</expression>
-      		</zone>
+          <include collection="strings"/>
+          <zone name="color.rgb.stylus">
+            <expression>(\b0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*)(0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\b)</expression>
+          </zone>
+          <zone name="color.rgb-percentage.stylus">
+            <expression>\b([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%</expression>
+          </zone>
+          <zone name="parameter.misc">
+            <expression>[^'") \t]+</expression>
+          </zone>
       	</subzones>
       </zone>
       <zone name="property-value.font.stylus">
@@ -208,8 +208,8 @@
           <capture number="0" name="punctuation.definition.begin"/>
         </starts-with>
         <ends-with>
-        	<expression>\1</expression>
-        	<capture number="0" name="punctuation.definition.end"/>
+          <expression>\1</expression>
+          <capture number="0" name="punctuation.definition.end"/>
         </ends-with>
       </zone>
     </collection>
