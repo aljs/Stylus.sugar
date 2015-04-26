@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key>
-    <string>stylus.sugar</string>
+    <string>Stylus.sugar</string>
     <key>CFBundleIdentifier</key>
     <string>com.stylus</string>
     <key>CFBundleVersion</key>
