@@ -4,15 +4,15 @@ This is a plugin for MacRabbit's [Espresso](http://macrabbit.com/espresso/) code
 
 ## Features:
 
-* **Auto-complete for pseudo-classes and properties**
+* **Auto-complete for pseudo-classes, property values and property names**
 * **Syntax highlighting with color scheme based on active color theme in Espresso**
 * **Navigator panel basic support**
 
 ## Installation
 
-[Download the project](https://github.com/aljs/Stylus.sugar/zipball/master), decompress it, rename the folder to "Stylus.sugar" and double click it to install in Espresso.
-
-Or you can install it using terminal:
+Installing via terminal:
 
     cd ~/Library/Application\ Support/Espresso/Plug-Ins
-    git clone git://github.com/aljs/Stylus.sugar.git
+    git clone https://github.com/aljs/Stylus.sugar.git
+
+Or you can [download the project](https://github.com/aljs/Stylus.sugar/zipball/master), decompress it, rename the folder to "Stylus.sugar" and double click it to install in Espresso.

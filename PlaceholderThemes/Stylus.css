@@ -1,18 +1,18 @@
 /*
-	@theme Stylus Placeholder
-	@placeholder stylus
+  @theme Stylus Placeholder
+  @placeholder stylus
 */
 
 stylus {
-	spell-check: disabled;
+  spell-check: disabled;
 }
 
 property-name {
-	color: #d4430d;
+  color: #d4430d;
 }
 
 property-value {
-	color: #43a202;
+  color: #43a202;
 }
 
 bold {

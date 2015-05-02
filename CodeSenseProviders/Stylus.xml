@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesense>
   <provider>
-		<selector>stylus > property-name:capture(name) + *</selector>
-		<completions>com.stylus.property.${name}</completions>
-		<complete-match capture="1">\s*([a-zA-Z0-9-]*)</complete-match>
-	</provider>
-	
-	<provider>
-		<selector>stylus</selector>
-		<completions>com.stylus.properties</completions>
-		<complete-match capture="2">(^|;)\s*([a-zA-Z0-9-]*)</complete-match>
-	</provider>
+    <selector>stylus > property-name:capture(name) + *</selector>
+    <completions>com.stylus.property.${name}</completions>
+    <complete-match capture="1">\s*([a-zA-Z0-9-]*)</complete-match>
+  </provider>
+  
+  <provider>
+    <selector>stylus</selector>
+    <completions>com.stylus.properties</completions>
+    <complete-match capture="2">(^|;)\s*([a-zA-Z0-9-]*)</complete-match>
+  </provider>
 </codesense>
